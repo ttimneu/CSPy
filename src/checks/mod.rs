@@ -45,8 +45,7 @@ pub struct SecurityIssue {
     pub message: String,
     pub recommendation: String,
 }
-
-#[derive(Debug, Serialize, Deserialize)]
+#[derive(Clone)]
 pub struct ScanResult {
     pub url: String,
     pub status: u16,
