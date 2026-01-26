@@ -1,8 +1,8 @@
 [package]
 name = "cspy"
 version = "0.1.0"
-edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+edition = "2026"
+authors = ["Alham Rizvi its47h4m@gmail.com"]
 description = "A blazing-fast Content Security Policy and HTTP security headers analyzer"
 license = "MIT"
 
