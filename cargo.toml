@@ -1,0 +1,18 @@
+[package]
+name = "cspy"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A blazing-fast Content Security Policy and HTTP security headers analyzer"
+license = "MIT"
+
+[dependencies]
+reqwest = { version = "0.12", features = ["json", "cookies", "gzip", "brotli", "deflate", "rustls-tls"] }
+tokio = { version = "1", features = ["full"] }
+clap = { version = "4", features = ["derive"] }
+colored = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+url = "2"
+regex = "1"
+indicatif = "0.17"
