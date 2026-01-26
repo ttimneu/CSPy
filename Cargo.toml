@@ -8,6 +8,7 @@ license = "MIT"
 
 [dependencies]
 reqwest = { version = "0.12", features = ["json", "cookies", "gzip", "brotli", "deflate", "rustls-tls"] }
+chrono = { version = "0.4", features = ["serde"] }
 tokio = { version = "1", features = ["full"] }
 clap = { version = "4", features = ["derive"] }
 colored = "2"
