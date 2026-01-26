@@ -121,7 +121,7 @@ fn print_banner() {
                                           
     "#.bright_cyan().bold());
     println!("{}", "Content Security Policy & HTTP Security Headers Analyzer".bright_white());
-    println!("{}\n", "By Security Researcher | v0.1.0".dim());
+    println!("{}\n", "By Alham Rizvi | v0.1.0".dimmed());
 }
 
 fn read_urls_from_file(path: &PathBuf) -> Result<Vec<String>, Box<dyn std::error::Error>> {
