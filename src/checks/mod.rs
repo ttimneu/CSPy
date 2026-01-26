@@ -45,7 +45,8 @@ pub struct SecurityIssue {
     pub message: String,
     pub recommendation: String,
 }
-#[derive(Clone)]
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ScanResult {
     pub url: String,
     pub status: u16,
@@ -54,19 +55,23 @@ pub struct ScanResult {
 
 impl ScanResult {
     pub fn count_by_severity(&self, severity: &Severity) -> usize {
-        self.issues.iter().filter(|i| {
-            matches!(
-                (&i.severity, severity),
+        self.issues
+            .iter()
+            .filter(|issue| matches!(
+                (&issue.severity, severity),
                 (Severity::Critical, Severity::Critical)
-                | (Severity::High, Severity::High)
-                | (Severity::Medium, Severity::Medium)
-                | (Severity::Low, Severity::Low)
-                | (Severity::Info, Severity::Info)
-            )
-        }).count()
+                    | (Severity::High, Severity::High)
+                    | (Severity::Medium, Severity::Medium)
+                    | (Severity::Low, Severity::Low)
+                    | (Severity::Info, Severity::Info)
+            ))
+            .count()
     }
 
     pub fn has_critical(&self) -> bool {
-        self.issues.iter().any(|i| matches!(i.severity, Severity::Critical))
+        self.issues
+            .iter()
+            .any(|issue| matches!(issue.severity, Severity::Critical))
     }
 }
+
