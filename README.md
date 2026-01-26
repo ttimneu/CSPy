@@ -1,4 +1,6 @@
-# CSPy
+<img width="744" height="358" alt="image" src="https://github.com/user-attachments/assets/8ec341af-83b5-40b5-9a2c-f40f2798e1ad" />
+
+# CSPy - Content Security Policy & HTTP Security Headers Analyzer
 
 **Content Security Policy & HTTP Security Headers Analyzer**
 
